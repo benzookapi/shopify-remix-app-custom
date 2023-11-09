@@ -2,7 +2,7 @@
 
 name = "MyRemixApp1_Custom"
 client_id = "90b184c9e1337eecddfd43684b8fe35a"
-application_url = "https://dialogue-authorization-basically-aka.trycloudflare.com"
+application_url = "https://shopify-remix-app-custom.onrender.com"
 embedded = true
 
 [access_scopes]
@@ -11,10 +11,10 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://dialogue-authorization-basically-aka.trycloudflare.com/auth/callback",
-  "https://dialogue-authorization-basically-aka.trycloudflare.com/auth/shopify/callback",
-  "https://dialogue-authorization-basically-aka.trycloudflare.com/api/auth/callback",
-  "https://dialogue-authorization-basically-aka.trycloudflare.com/.shopify/graphiql/auth/callback"
+  "https://shopify-remix-app-custom.onrender.com/auth/callback",
+  "https://shopify-remix-app-custom.onrender.com/auth/shopify/callback",
+  "https://shopify-remix-app-custom.onrender.com/api/auth/callback",
+  "https://shopify-remix-app-custom.onrender.com/.shopify/graphiql/auth/callback"
 ]
 
 [webhooks]
@@ -25,4 +25,3 @@ embedded = false
 
 [build]
 automatically_update_urls_on_dev = true
-dev_store_url = "myteststore20230606.myshopify.com"
