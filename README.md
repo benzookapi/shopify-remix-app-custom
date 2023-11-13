@@ -258,12 +258,13 @@ This template uses [Remix](https://remix.run). The following Shopify tools are a
     SHOPIFY_APP_URL    ... The app top URL = your hosted server top URL.
     ```
 
-2. If you use PostgreSQL or other RDB for 'Session' table, you need some manual work on Prisma. This sample uses PostgreSQL with [this commit](https://github.com/benzookapi/shopify-remix-app-custom/commit/45c33258f1c8fa5c7f5b903bfc56be6642a78c77) and run `rpm run setup` = `npm run prisma generate && prisma migrate deploy`. Note that the target database should be empty and if you have some error, try `npm run prisma migrate resolve -- --rolled-back  "XXX_create_session_table"` (XXX is a part of the directory name uder `prisma/migrations`) and `npm run prisma migrate deploy` again. For the details of customizing Prisma configration, check [this page](https://www.prisma.io/docs/concepts/database-connectors/postgresql).
+2. If you use PostgreSQL or other RDB for the 'Session' table, you need some manual work on Prisma. This sample uses PostgreSQL with [this commit](https://github.com/benzookapi/shopify-remix-app-custom/commit/45c33258f1c8fa5c7f5b903bfc56be6642a78c77) and run `rpm run setup` = `npm run prisma generate && prisma migrate deploy`. Note that the target database should be empty and if you have some error, try `npm run prisma migrate resolve -- --rolled-back  "XXX_create_session_table"` (XXX is a part of the directory name uder `prisma/migrations`) and `npm run prisma migrate deploy` again. For the details of customizing Prisma configration, check [this page](https://www.prisma.io/docs/concepts/database-connectors/postgresql). (**TIPS:** The 'Session' table has records of ` id | shop | state | isOnline |   scope | expires | accessToken | userId `, which enables you to call Admin API outside the Remix app sharing the RDB access.)
 
 3. Change the app URL into public fixed one as [this commit](https://github.com/benzookapi/shopify-remix-app-custom/commit/45c33258f1c8fa5c7f5b903bfc56be6642a78c77) does and apply the change to the app settings running `npm run config:push` or manually in the pattner dashboard. 
 
 4. If your hosting service supports Docker, simply setting the Docker file path must work with `./Dockerfile`. If not, setting the same scripts in your service as described in the Docker file must work too like: `npm install && npm build && npm run setup && npm run start`.
 
 5. Access to the top page of `SHOPIFY_APP_URL`. If you see the shop domain input text and login button, you're successful. 
+
 
 
