@@ -244,7 +244,7 @@ This template uses [Remix](https://remix.run). The following Shopify tools are a
 - [Shopify Functions](https://shopify.dev/docs/api/functions)
 - [Getting started with internationalizing your app](https://shopify.dev/docs/apps/best-practices/internationalization/getting-started)
 
-## === Added by @benzookapi ===
+## === Added for your selected server hosting with your RDB ===
 
 ### How to deploy to [Render.com](https://render.com) (or other standalone servers like EC2)
 
