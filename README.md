@@ -262,7 +262,7 @@ This template uses [Remix](https://remix.run). The following Shopify tools are a
 
 3. Change the app URL into public fixed one as [this commit](../../commit/45c33258f1c8fa5c7f5b903bfc56be6642a78c77) does and apply the change to the app settings running `npm run config:push` or manually in the pattner dashboard. 
 
-4. If your hosting service supports Docker, simply setting the Docker file path must work with `./Dockerfile`. If not, setting the same scripts in your service as described in the Docker file must work too like: `npm install && npm build && npm run setup && npm run start`.
+4. If your hosting service supports Docker, simply setting the Docker file path must work with `./Dockerfile`. If not, setting the same scripts in your service as described in the Docker file must work too like: `npm install && npm run build && npm run setup && npm run start`.
 
 5. Access to the top page of `SHOPIFY_APP_URL`. If you see the shop domain input text and login button, you're successful. 
 
